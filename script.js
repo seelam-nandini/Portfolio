@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    responseMessage.innerHTML = 'Form submitted successfully!!';
+                    responseMessage.innerHTML = 'Message has been sent successfully!!';
                     responseMessage.style.color = 'green';
                     responseMessage.style.fontFamily = 'Poppins, sans-serif';
                     responseMessage.style.fontSize = '1.4rem';
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     responseMessage.style.textAlign = 'center';
                     responseMessage.style.margin = '10px 0';
                 } else {
-                    responseMessage.innerHTML = 'There was an error submitting the form. Please try again.';
+                    responseMessage.innerHTML = 'There was an error in sending the message. Please try again.';
                     responseMessage.style.color = 'red';
                 }
                 responseMessage.style.display = 'block';
