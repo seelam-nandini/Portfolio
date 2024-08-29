@@ -69,7 +69,7 @@ function animateOnScroll() {
         }
     });
 }
-// Add scroll event listener
+// Adding scroll event listener
 window.addEventListener('scroll', animateOnScroll);
 // Trigger animation on page load (for sections already in view)
 document.addEventListener('DOMContentLoaded', animateOnScroll);
