@@ -175,7 +175,6 @@ section{
     border-color: grey;
     transform:scale(1)translateY(-5px);
 }
-
 .btn-group{
     position: relative;
     display: flex;
@@ -366,7 +365,6 @@ section{
     background-color: #FFFFFF;
     padding-top: 3rem;
 }
-
 .projects .heading {
     text-align: center;
     font-size: 2.7rem;
@@ -380,7 +378,6 @@ section{
     gap: 1.5rem;
     justify-content: center;
 }
-
 .project-card {
     background-color: #fffafa;
     border-radius: 2px;
@@ -393,7 +390,6 @@ section{
     display: flex;
     flex-direction: column;
 }
-
 .project-card:hover {
     transform: translateY(-10px);
 }
@@ -411,7 +407,6 @@ section{
     object-fit: cover;
     box-sizing: border-box;
 }
-
 .project-content {
     padding: 1.5rem;
     display: flex;
@@ -419,20 +414,17 @@ section{
     justify-content: space-between;
     flex-grow: 1;
 }
-
 .project-title {
     font-size: 1.5rem;
     margin-bottom: 0.3rem;
     color: #000000;
 }
-
 .project-tech {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
     margin-bottom: 0.1rem;
 }
-
 .project-tech a {
     color: #4e545c;
     padding: 0.25rem 0.20rem;
@@ -458,13 +450,11 @@ section{
     text-align: justify;
     padding : 0.3rem;
 }
-
 .project-links {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
 .project-link {
     font-size: 1.2rem;
     font-weight: 500;
@@ -475,20 +465,17 @@ section{
     border-radius: 4px;
     transition: background-color 0.3s;
 }
-
 .project-link:hover {
     background-color: white;
     color: black;
     border: 1px solid black;
 }
-
 .github-link img {
     width: 24px;
     height: 24px;
     filter: invert(100%);
     transition: filter 0.3s;
 }
-
 .github-link img:hover {
     filter: invert(50%);
 }
@@ -715,22 +702,18 @@ section{
     0% { transform: translateX(-100%); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
-
 @keyframes slideInRight {
     0% { transform: translateX(100%); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
-
 @keyframes slideInUp {
     0% { transform: translateY(100%); opacity: 0; }
     100% { transform: translateY(0); opacity: 1; }
 }
-
 @keyframes slideInDown {
     0% { transform: translateY(-100%); opacity: 0; }
     100% { transform: translateY(0); opacity: 1; }
 }
-
 /* Default state before animation */
 .home-content h1,
 .home-content h3,
@@ -741,20 +724,17 @@ section{
 .education-box .education-content {
     opacity: 0;
 }
-
 /* General animation trigger class */
 .animate {
     animation-duration: 0.80s;
     animation-fill-mode: forwards;
 }
-
 /* Home Section Animations */
 .home-content h1.animate,
 .home-content h3.animate,
 .home-content p.animate {
     animation-name: slideInLeft;
 }
-
 /* About Section Animations */
 .about-content h2.animate,
 .about-content p.animate,
@@ -762,13 +742,11 @@ section{
 .about-content ul.animate {
     animation-name: slideInRight;
 }
-
 /* Education Section Animations */
 .education-content.animate {
     animation-duration: 0.20s;
     animation-name: slideInUp;
 }
-
 /* Animation trigger class for mobile view */
 @media (max-width: 768px) { /* Adjust the max-width to match your mobile breakpoint */
     .project-card.animate {
@@ -776,7 +754,6 @@ section{
         animation-name: slideInUpn;
     }
 }
-
 /*------------------------------------------------------------End of animations-------------------------------------------------------- */
 .home-content, .about-content {
     overflow: hidden;
@@ -862,7 +839,6 @@ section{
         display: flex;
         flex-direction: column;
     }
-    
     .home {
         flex-direction: column-reverse;
         margin: 1rem 0;
@@ -930,7 +906,7 @@ section{
         text-align: justify; 
     }
     ::-webkit-scrollbar {
-        width: 30px;
+        width: 13px;
     }
     ::-webkit-scrollbar-thumb {
         background-color: #888; 
@@ -956,5 +932,6 @@ section{
         margin-right: auto;
         width: 100%; 
         padding: 2rem 1rem;
-    }
+    }  
 }
+

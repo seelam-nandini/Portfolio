@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const responseMessage = document.getElementById('response-message');
     if (form) {
         form.addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the default form submission
+            event.preventDefault();
             const formData = new FormData(form);
             fetch(form.action, {
                 method: 'POST',
@@ -62,7 +62,7 @@ function isInView(element) {
 }
 // Function to add 'animate' class if in view
 function animateOnScroll() {
-    const elements = document.querySelectorAll('.home-content h1, .home-content h3, .contact-box, .home-content p, .about-content h2, .about-content p, .about-content h3, .about-content ul, .education-content, .project-card');
+    const elements = document.querySelectorAll('.home-content h1, .home-content h3, .contact-box, .home-content p, .about-content h2, .about-content p, .about-content h3, .about-content ul, .education-content, .project-card, .project-description');
     elements.forEach(element => {
         if (isInView(element)) {
             element.classList.add('animate');
