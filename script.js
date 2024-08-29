@@ -5,7 +5,7 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x')
     navbar.classList.toggle('active');
 };
-// Close the menu when a link is clicked
+// Close the menu when a link of the section is clicked
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         if (navbar.classList.contains('active')) {
@@ -14,16 +14,14 @@ navLinks.forEach(link => {
         }
     });
 });
-// New form submission handling
+// New form submission handling in the Contact Section
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contact-form');
     const responseMessage = document.getElementById('response-message');
     if (form) {
         form.addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent the default form submission
-
             const formData = new FormData(form);
-
             fetch(form.action, {
                 method: 'POST',
                 body: formData
@@ -52,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-///Animations JS Code
 // Function to check if an element is in view
 function isInView(element) {
     const rect = element.getBoundingClientRect();
@@ -65,7 +62,7 @@ function isInView(element) {
 }
 // Function to add 'animate' class if in view
 function animateOnScroll() {
-    const elements = document.querySelectorAll('.home-content h1, .home-content h3, .contact-box, .home-content p, .about-content h2, .about-content p, .about-content h3, .about-content ul');
+    const elements = document.querySelectorAll('.home-content h1, .home-content h3, .contact-box, .home-content p, .about-content h2, .about-content p, .about-content h3, .about-content ul, .education-content, .project-card');
     elements.forEach(element => {
         if (isInView(element)) {
             element.classList.add('animate');
@@ -76,7 +73,6 @@ function animateOnScroll() {
 window.addEventListener('scroll', animateOnScroll);
 // Trigger animation on page load (for sections already in view)
 document.addEventListener('DOMContentLoaded', animateOnScroll);
-// Smooth scroll behavior for navbar links
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();

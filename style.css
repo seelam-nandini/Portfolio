@@ -220,7 +220,6 @@ section{
 }
 .about-img img{
     width: 22vw;
-    width: 22vw;
     border-radius:50%;
 }
 .about-img img:hover{
@@ -285,14 +284,14 @@ section{
     height:5rem;
 }
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
     height: 2px;
 }
 ::-webkit-scrollbar-track {
-    background-color: white;
+    background-color: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: black;
+    background-color: #888;
     border-radius: 0;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -359,139 +358,204 @@ section{
     font-size: 3rem;
 }
 /*-------------------------------------------Projects-----------------------------------------------------------*/
-.projects{
-    background-color:#ffffff;
+/* Projects Section */
+.projects {
+    padding: 2rem 0;
+    background-color: #101010;
+    color: #ffffff;
+    background-color: #FFFFFF;
     padding-top: 3rem;
 }
-.heading {
+
+.projects .heading {
     text-align: center;
-    font-size: 4rem;
+    font-size: 2.7rem;
     margin-bottom: 2rem;
+    color: #000000;
+    padding: 0.5rem;
 }
-.project-box{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    place-items: center;
-    gap: 3rem;
-    row-gap: 5rem;
-}
-.project-card{
+.project-box {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     justify-content: center;
-    text-align: center;
-    background-color: #e2dfd2;
-    color:black;
-    border: 0.2px solid black;
-    border-radius: 2rem;
-    cursor: pointer;
-    transition:0.3s ease-in-out;
-    gap: 1rem;
-    padding: 2rem 2rem;
-    overflow: hidden;
-    min-height: 350px;
-}
-.project-card:hover{
-    transform: scale(1.02);
-    border-color: black;
-    background-color:#E9DCC9;
-    color:black;
-}
-.project-card img{
-    max-width:250px;
-    max-height: 150px;
-    border-radius: 1%;
-    object-fit: cover;
-}
-.project-card h3{
-    font-size: 1.5rem;
-}
-.project-card p{
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: justify;
-}
-.project-card .btn {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 15rem;
-    height: 4rem; 
-    background: var(--text-color); 
-    border: .2rem solid var(--main-color); 
-    border-radius: .4rem; 
-    font-size: 1.4rem; 
-    font-weight: 600; 
-    letter-spacing: .1rem; 
-    color: var(--main-color); 
-    z-index: 1;
-    overflow: hidden; 
-    transition: 0.5s;
-    text-align: center; 
-    cursor: pointer; 
-    margin-top: 2rem; 
 }
 
-.project-card .btn:hover {
-    transform: scale(1.1); 
-    background: var(--main-color);
-    color: var(--text-color); 
+.project-card {
+    background-color: #fffafa;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+    max-width: 360px;
+    max-height: 484px;
+    width: 100%;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+.projects .heading {
+    font-size: 4rem; 
+    font-weight: bold;
+}
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 190px;
+    border-bottom: 2px solid #000000;
+    border: 1px solid #000000;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.project-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+    color: #000000;
+}
+
+.project-tech {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.1rem;
+}
+
+.project-tech a {
+    color: #4e545c;
+    padding: 0.25rem 0.20rem;
+    border-radius: 0px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    margin-bottom: 0.1rem;
+}
+.project-description::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px; 
+    background: #000; 
+    margin-bottom: 0.5rem; 
+}
+.project-description {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 1.1rem;
+    text-align: justify;
+    padding : 0.3rem;
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-link {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #151515;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.github-link img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%);
+    transition: filter 0.3s;
+}
+
+.github-link img:hover {
+    filter: invert(50%);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .project-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        max-width: 100%;
+    }
 }
 /*---------------------------------------Contact------------------------------------------------------*/
 .contact {
     min-height: auto;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
 }
-
 .contact .heading {
     padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0; 
+    margin-bottom: 1rem;
 }
-
+.contact-box {
+    margin-top: 0;
+}
 .contact form {
     max-width: 50rem;
     margin: 0 auto;
     text-align: center;
 }
-
 .contact form .contact-box {
     padding: 2rem;
-    border: 2px solid black !important; /* Border around all input fields */
+    border: 2px solid black !important;
     border-radius: 10px;
     margin-bottom: 2rem;
     background-color: #3B444B;
 }
-
 .contact form .input-box {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 1rem;  /* Add gap between the input fields */
+    margin-bottom: 0.6rem; 
 }
-
 .contact form .input-box .input-field {
-    flex: 1; /* Allow input fields to take equal space */
-    min-width: 48%; /* Ensure fields don't get too small on narrow screens */
+    flex: 1;
+    min-width: 48%;
 }
-
 .contact form .input-box .input-field input,
 .contact form .textarea-field textarea {
     width: 100%;
-    padding: 1.5rem;
+    padding: 1.2rem;
     font-size: 1.6rem;
     color: black;
     background: white;
     border-radius: .6rem;
     border: .2rem solid black;
 }
-
 .contact form .input-box .input-field input::placeholder,
 .contact form .textarea-field textarea::placeholder {
     color: black;
 }
-
 .contact form .focus {
     position: absolute;
     top: 0%;
@@ -503,25 +567,21 @@ section{
     z-index: -1;
     transition: .5s;
 }
-
 .contact form .input-box .input-field input:focus ~ .focus,
 .contact form .input-box .input-field input:valid ~ .focus,
 .contact form .textarea-field textarea:focus ~ .focus,
 .contact form .textarea-field textarea:valid ~ .focus {
     width: 100%;
 }
-
 .contact form .textarea-field {
     position: relative;
     margin: .8rem 0;
     display: flex;
 }
-
 .contact form .textarea-field textarea {
     resize: none;
-    flex: 1; /* Ensure textarea takes full width available */
+    flex: 1;
 }
-
 .contact form .btn-box .btn {
     cursor: pointer;
     border: 2px solid black;
@@ -533,12 +593,10 @@ section{
     transition: background-color 0.1s, color 0.3s, border-color 0.3s;
     border-radius: 5px;
 }
-
 .contact form .btn-box {
     text-align: center;
     margin-top: 1rem;
 }
-
 /*------------------------------------------------footer---------------------------------------------------------*/
 .footer {
     background-color: #F0EAD6;
@@ -573,21 +631,17 @@ section{
     align-items: center;
     flex-direction: column;
     min-height: auto;
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
+    padding-top: 3rem; 
 }
-.education {
-    padding-top: 2rem; 
-}
-
 .education .heading {
-    padding: 0.5rem;
+    padding: 0.3rem;
 }
 .education .education-row {
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
 }
-
 .education-row .education-column {
     flex: 1 1 40rem;
 }
@@ -595,7 +649,6 @@ section{
     font-size: 2.1rem;
     margin: 0 0 1.5rem 2rem;
 }
-
 .education-column .education-box {
     border-left: .2rem solid var(--second-bg-color);
 
@@ -604,7 +657,6 @@ section{
     position: relative;
     padding-left: 2rem;
 }
-
 .education-box .education-content::before {
     content: '';
     position: absolute;
@@ -615,7 +667,6 @@ section{
     background: var(--text-color);
     border-radius: 50%;
 }
-
 .education-content .content {
     position: relative;
     padding: 1rem;
@@ -632,14 +683,12 @@ section{
     left: 0%;
     width: 0%;
     height: 100%;
-    background: #e9dcc9;
+    background: #FFF5EE;
     z-index: -1;
     transition: .5s;
 }
-
 .education-content .content:hover::before {
     width: 100%;
-
 }
 .education-content .content .year {
     font-size: 1.4rem;
@@ -658,10 +707,10 @@ section{
 }
 .cgpa {
     font-style: italic;
-    font-size:1.2rem;
+    font-size:1.1rem;
 }
 /*------------------------------------------------------------------Animations-------------------------------------------------*/
-/* Keyframes for slide-in animation */
+/* Keyframes for slide-in animations */
 @keyframes slideInLeft {
     0% { transform: translateX(-100%); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
@@ -671,23 +720,63 @@ section{
     0% { transform: translateX(100%); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
+
+@keyframes slideInUp {
+    0% { transform: translateY(100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInDown {
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
 /* Default state before animation */
 .home-content h1,
-.home-content h3 {
+.home-content h3,
+.about-content h2,
+.about-content p,
+.about-content h3,
+.about-content ul,
+.education-box .education-content {
     opacity: 0;
 }
-/* Animation trigger class */
+
+/* General animation trigger class */
 .animate {
     animation-duration: 0.80s;
     animation-fill-mode: forwards;
 }
 
-.home-content h1.animate {
+/* Home Section Animations */
+.home-content h1.animate,
+.home-content h3.animate,
+.home-content p.animate {
     animation-name: slideInLeft;
 }
-.home-content h3.animate {
-    animation-name: slideInLeft;
+
+/* About Section Animations */
+.about-content h2.animate,
+.about-content p.animate,
+.about-content h3.animate,
+.about-content ul.animate {
+    animation-name: slideInRight;
 }
+
+/* Education Section Animations */
+.education-content.animate {
+    animation-duration: 0.20s;
+    animation-name: slideInUp;
+}
+
+/* Animation trigger class for mobile view */
+@media (max-width: 768px) { /* Adjust the max-width to match your mobile breakpoint */
+    .project-card.animate {
+        animation-duration: 0.80s;
+        animation-name: slideInUpn;
+    }
+}
+
 /*------------------------------------------------------------End of animations-------------------------------------------------------- */
 .home-content, .about-content {
     overflow: hidden;
@@ -708,7 +797,7 @@ section{
         border-left: 1.5px solid black;
         border-bottom: 1.5px solid black;
         display: none;
-        transition: transform 0.3s ease-in-out; 
+        transition: transform 0.3s ease-in-out;
         z-index: 1001;
     }
     .navbar a{
@@ -722,7 +811,7 @@ section{
         text-decoration: none;
     }
     .navbar a:hover::after {
-        background-color: #555D50; 
+        background-color: #555D50;
     }
     .navbar a::after {
         content: '';
@@ -750,6 +839,30 @@ section{
     .gradient-btn{
         display:none;
     }
+    .project-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-card {
+        max-width: 90%;
+        padding-left: 1rem;  
+        padding-right: 1rem; 
+        margin-left: 4rem;   
+        margin-right: 4rem; 
+    }
+    .project-card {
+        background-color: #fffafa;
+        border-radius: 2px;
+        overflow: hidden;
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+        max-width: 320px;
+        max-height: 584px;
+        width: 100%;
+        transition: transform 0.3s;
+        display: flex;
+        flex-direction: column;
+    }
+    
     .home {
         flex-direction: column-reverse;
         margin: 1rem 0;
