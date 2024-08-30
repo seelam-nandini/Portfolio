@@ -695,6 +695,7 @@ section{
 .cgpa {
     font-style: italic;
     font-size:1.1rem;
+    display: none;
 }
 /*------------------------------------------------------------------Animations-------------------------------------------------*/
 /* Keyframes for slide-in animations */
